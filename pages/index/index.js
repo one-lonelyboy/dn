@@ -7,7 +7,8 @@ Page({
   getdata() {
     let that = this
     db.collection("goodsList").where({
-      hotswitch: true
+      hotswitch: true,
+      newswitch: false
     }).limit(10).get({
        success(res) {
          wx.stopPullDownRefresh()
@@ -18,6 +19,7 @@ Page({
        }
      })
      db.collection("goodsList").where({
+      hotswitch: false,
       newswitch: true
     }).limit(10).get({
        success(res) {
