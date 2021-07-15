@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "SeachInput": "../../comments/Seach/Seach",
+    "Information": "../../comments/Information/Information"
+  },
+  "enablePullDownRefresh":true,
+  "backgroundColor": "#eee"
+}

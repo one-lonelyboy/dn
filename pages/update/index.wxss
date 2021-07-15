@@ -1,0 +1,65 @@
+/* pages/update/index.wxss */
+.updateData {
+  padding: 24rpx;
+}
+.updateData .titletop {
+  display: flex;
+  justify-content: center;
+  font-size: 48rpx;
+}
+.updateData .title {
+  margin-top: 36rpx;
+  font-size: 30rpx;
+}
+.updateData .title .getiamge {
+  display: inline-block;
+  margin-right: 12rpx;
+  padding: 0rpx 10rpx;
+  background-color: #ccc;
+  border-radius: 8rpx;
+}
+.updateData .inputview {
+  border: 1px solid #eee;
+  height: 70rpx;
+  border-radius: 8rpx;
+}
+.updateData .textView {
+  border: 1px solid #eee;
+  min-height: 170rpx;
+  width: 100%;
+  border-radius: 8rpx;
+}
+.updateData .images {
+  margin-bottom: 24rpx;
+}
+.updateData .images text {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.updateData input {
+  padding-left: 18rpx;
+}
+.updateData .modalimage {
+  width: 100%;
+}
+.updateData .swiperImage {
+  margin-top: 24rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.updateData .swiperImage .swiperitem {
+  width: 32%;
+  height: 180rpx;
+  margin-right: 2%;
+  border: 1px solid #eee;
+}
+.updateData .swiperImage .swiperitem .sweiperImg {
+  width: 100%;
+  height: 100%;
+}
+.updateData .swiperImage :nth-child(3n) {
+  margin-right: 0;
+}

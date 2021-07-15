@@ -1,0 +1,12 @@
+<!--comments/publicGoods/publicgoods.wxml-->
+<view class="goodsList">
+    <navigator class="goodnav" url="/pages/details/index?id={{item._id}}" hover-class="navigator-hover" open-type="navigate" wx:for="{{goodsList}}" wx:key="_id">
+        <view class="good">
+            <view class="images">
+                <image src="{{item.url}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+            </view>
+            <view class="name">{{item.name}}</view>
+            <view class="price">¥{{item.price}}</view>
+        </view>
+    </navigator>
+</view>

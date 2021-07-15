@@ -1,0 +1,84 @@
+.goodsList {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.goodsList .flex {
+  height: 45px;
+  width: 100%;
+}
+.goodsList .center {
+  width: 100%;
+  display: flex;
+}
+.goodsList .center .left {
+  width: 25%;
+  height: 100%;
+  background-color: #eee;
+}
+.goodsList .center .left .leftitem {
+  height: 80rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+.goodsList .center .left .select {
+  border-left: 2px solid red;
+  background-color: #fff;
+}
+.goodsList .center .right {
+  width: 75%;
+  height: 100%;
+}
+.goodsList .center .right .rightitem {
+  height: 220rpx;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+.goodsList .center .right .rightitem .itemleft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.goodsList .center .right .rightitem .itemleft image {
+  width: 80%;
+  height: 80%;
+}
+.goodsList .center .right .rightitem .itemright {
+  width: 380rpx;
+  display: flex;
+  align-items: center;
+}
+.goodsList .center .right .rightitem .itemright .itemrightr {
+  width: 360rpx;
+  height: 70%;
+}
+.goodsList .center .right .rightitem .itemright .itemrightr .top {
+  height: 70%;
+  width: 100%;
+}
+.goodsList .center .right .rightitem .itemright .itemrightr .botton {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  color: red;
+}
+.goodsList .center .right .rightitem .itemright .itemrightr .botton .bottonr {
+  padding-bottom: 40rpx;
+}
+.goodsList .center .right .isok {
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: #ccc;
+}
+.goodsList .center .right .nogoods {
+  width: 100%;
+  height: 300rpx;
+  text-align: center;
+  line-height: 300rpx;
+}

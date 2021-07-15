@@ -1,0 +1,18 @@
+/* comments/Seach/Seach.wxss */
+.seachinput {
+  height: 45px;
+  padding: 18rpx;
+  background-color: #eee;
+}
+.seachinput navigator {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  background-color: #fff;
+  height: 50rpx;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  padding-left: 16rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}

@@ -1,0 +1,17 @@
+<!--pages/seach/index.wxml-->
+<view class="searchGoods">
+   <view class="searchinput">
+      <input
+        type="text"
+        value="{{searchValue}}"
+        confirm-type="search"
+        bindconfirm="changSearch"
+        placeholder="请输入要搜索的商品"/>
+   </view>
+   <view class="searchList" wx:if="{{searchList.length !== 0}}">
+      <GoodsList goodsList="{{searchList}}"></GoodsList>
+      <view class="isok" wx:if="{{isOk}}">
+            --------已经没有咯---------
+        </view>
+   </view>
+</view>

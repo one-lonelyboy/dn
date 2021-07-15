@@ -1,0 +1,100 @@
+.inputSiper {
+    height: 380rpx;
+    swiper {
+        height: 380rpx;
+        width: 100%;
+        image {
+            width: 100%;
+            height: 380rpx;
+        }
+    }
+   
+}
+.title {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28rpx;
+    border-bottom: 2px solid #ccc;
+    padding: 0 24rpx;
+    font-weight: 900;
+    view {
+        display: flex;
+        align-items: center;
+        // border-left: 8rpx solid #000;
+        height: 24rpx;
+        padding-left: 6rpx;
+    }
+    navigator {
+        font-size: 24rpx;
+        color: #ccc;
+        float: right;
+    }
+}
+.goodsList {
+    .scollview {
+        height: 280rpx;
+        width: 100%;
+        padding: 12rpx;
+        white-space: nowrap;
+        .navlist {
+            width: 220rpx;
+            margin-right: 10rpx;
+            display: inline-block;
+            .list {
+                width: 100%;
+                padding: 10rpx;
+                image {
+                    width: 100%;
+                    height: 220rpx;
+                }
+                text {
+                    width: 100%;
+                    text-overflow: -o-ellipsis-lastline;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+    } 
+}
+.goodsType {
+    margin-top: 18rpx;
+   .listType {
+       display: flex;
+       flex-wrap: wrap;
+       .itemnavigator {
+         width: 25%;
+         box-sizing: border-box;
+         padding: 14rpx;
+         .images {
+            width: 100%;
+            text-align: center;
+            image {
+                border-radius: 20rpx;
+                width: 80%;
+                height: 120rpx;
+            }
+         }
+         .titleview {
+             width: 100%;
+             text-align: center;
+         }
+         
+     }
+   } 
+}
+.imageList {
+    width: 100%;
+    image {
+        width: 100%;
+        margin-bottom: 16rpx;
+        height: 180rpx;
+    } 
+}

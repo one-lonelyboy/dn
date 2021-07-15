@@ -1,0 +1,24 @@
+<!--pages/settingGoodsType/index.wxml-->
+<view class="stDoodsType">
+   <view class="title">
+        <view class="ti">产品品牌设置</view>
+        <view class="td" bindtap="addDliog">添加</view>
+    </view>
+    <view class="goodsList">
+        <view class="goodsItem" wx:key="_id" wx:for="{{goodsTypeList}}">
+            <view class="left">
+                {{index + 1}}
+            </view>
+            <view class="center">
+                <view class="name">{{item.name}}</view>
+            </view>
+            <view class="right">
+                <view class="details" data-name="{{item.name}}" data-id="{{item._id}}" bindtap="detailsType">编辑</view>
+            </view>
+        </view>
+    </view>
+  <modal class="modalview" title="{{title}}" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="opens">
+      <view class="titleview">种类名称：</view>
+      <input type="text" bindinput="inputName" value="{{name}}"/>
+  </modal>
+</view>

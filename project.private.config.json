@@ -1,0 +1,73 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/update/index",
+          "pathName": "pages/update/index",
+          "query": "id=79550af260dd42b5234db283093e2b98&type=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/goodsSetUp/index",
+          "pathName": "pages/goodsSetUp/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/settingGoodsType/index",
+          "pathName": "pages/settingGoodsType/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/settingGoodsType/index",
+          "pathName": "pages/settingGoodsType/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/seach/index",
+          "pathName": "pages/seach/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goodsList/index",
+          "pathName": "pages/goodsList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/details/index",
+          "pathName": "pages/details/index",
+          "query": "id=28ee4e3e60e58aab2889c48a33156c94",
+          "scene": null
+        },
+        {
+          "name": "pages/contact/index",
+          "pathName": "pages/contact/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/settingGoodsBrand/index",
+          "pathName": "pages/settingGoodsBrand/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

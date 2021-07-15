@@ -1,0 +1,52 @@
+<view class="goodsList">
+    <view class="flex">
+        <SeachInput></SeachInput>
+    </view>
+    <view class="center" style="height:{{height}}">
+        <scroll-view scroll-y="true" class="left">
+           <view
+            class="leftitem {{chengeIndex === index ? 'select' : ''}}"
+            wx:key="_id"
+            bindtap="changelist"
+            data-name="{{item.name}}"
+            data-index="{{index}}"
+            wx:for="{{goodsType}}">
+              {{item.name}}
+            </view>
+        </scroll-view>
+        <scroll-view
+          enhanced 
+          scroll-y="true"
+          bindscrolltolower="getcrolltolower"
+          upper-threshold="10"
+          lower-threshold="10"
+          class="right">
+            <view class="list" wx:if="{{goodsList.length !== 0}}">
+                <navigator
+                wx:key="_id"
+                wx:for="{{goodsList}}"
+                url="/pages/details/index?id={{item._id}}"
+                class="rightitem">
+                    <view class="itemleft">
+                        <image src="{{item.url}}"></image>
+                    </view>
+                    <view class="itemright">
+                        <view class="itemrightr">
+                            <view class="top">{{item.name}}</view>
+                            <view class="botton">
+                                <view class="bottonl"> ¥{{item.price}}</view>
+                                <!-- <view class="bottonr"> <icon class="iconfont icon-gouwuche_"></icon></view> -->
+                            </view>
+                        </view>
+                    </view>
+                </navigator>
+                <view class="isok" wx:if="{{isOk}}">
+                --------已经没有咯---------
+                </view>
+            </view>
+            <view class="nogoods" wx:else>
+                暂无数据
+            </view>
+        </scroll-view>
+    </view>
+</view>

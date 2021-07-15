@@ -1,0 +1,4 @@
+<view class="seachinput">
+    <navigator url="/pages/seach/index">请输入产品名称</navigator>
+</view>
+  

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "GoodsList": "../../comments/publicGoods/publicgoods"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#eee"
+}

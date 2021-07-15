@@ -1,0 +1,48 @@
+<!--pages/briefIntroduction/index.wxml-->
+<view class="briefIntroduction">
+    <view class="profileCompany">
+        <view class="title">公司简介</view>
+        <view class="detailsprofile">
+            <view style="text-indent: 40rpx;">
+                广安鼎能机电设备有限公司长期积极致力于机械设备、五金产品及电子产品销售；机械加工；
+            机械设备安装与维修；产品销售代理服务；机械设备经营租赁；自动化控制系统制造；液压动
+            力机械及元件制造；自动化成套控制装置系统；橡胶制品业；节能环保设备的研发、技术转让、
+            咨询服务；技术服务；仓储服务；通用设备制造业；矿产品、建材及化工产品批发。
+            </view>
+            <view style="text-indent: 40rpx;">
+                公司位于四川省广安市广安区建安南路375号交通便利。 广安鼎能机电设备有限公司注册资本200万元人
+            民币万元，本着“客户第一，诚信至上，以人为本”的原则，欢迎国内外业/公司/机构与本单位建
+            立长期的合作关系。热诚规迎各界朋友前来参观、考察、洽谈业务。公司自目立至今，不断吸取和
+            借鉴国内外先进的经营和管投诉理念，努力实现公司业务、管理等方面自我超越过去的一年，是精
+            彩的一年，也是收获的一年。胡梅香代表广安鼎能机电设备有限公司向曾经支持关心我们的广大
+            客户、朋友表示最诚挚的谢意！开店迎广大客户、朋友来电来函咨询，我们将一如既往的向您提供
+            优质的服务。
+            </view>
+        </view>
+    </view>
+    <view class="businessMain">
+        <view class="title">主营业务</view>
+        <view class="businessMainbody">
+            <view class="bodylist">机械设备</view>
+            <view class="bodylist">五金产品及电子产品销售</view>
+            <view class="bodylist">机械加工</view>
+            <view class="bodylist">机械设备安装与维修</view>
+            <view class="bodylist">产品销售代理服务</view>
+            <view class="bodylist">机械设备经营租赁</view>
+            <view class="bodylist">自动化控制系统制造投诉</view>
+            <view class="bodylist">液压动力机械及元件制造</view>
+            <view class="bodylist">自动化成套控制装置系统</view>
+            <view class="bodylist">橡胶制品业</view>
+        </view>
+          
+    </view>
+    <view class="container log-list">
+      <view style="margin-bottom: 20rpx">公司地址：四川省广安市广安区建安南路375号</view>
+      <map id="map" longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        markers="{{markers}}"
+        enable-scroll="{{true}}"
+        style="width: 90%; height: 400rpx;margin-left:5%" show-location>
+      </map>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/establish/index.wxml-->
+<view class="establish">
+   <navigator target="" url="/pages/swiper/index" >
+       <button>首页轮播图设置</button>
+   </navigator>
+   <navigator target="" url="/pages/goodsSetUp/index" >
+       <button>产品设置</button>
+   </navigator>
+   <navigator target="" url="/pages/settingGoodsType/index" >
+       <button>产品种类设置</button>
+   </navigator>
+   <navigator target="" url="/pages/settingGoodsBrand/index" >
+       <button>产品品牌设置</button>
+   </navigator>
+</view>

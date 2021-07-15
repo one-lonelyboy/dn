@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "SeachInput": "../../comments/Seach/Seach",
+    "GoodsList": "../../comments/publicGoods/publicgoods"
+  },
+  "navigationBarTitleText": "产品列表",
+  "navigationBarBackgroundColor": "#ccc"
+
+
+}

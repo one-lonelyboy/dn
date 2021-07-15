@@ -1,0 +1,17 @@
+<!--pages/swiper/index.wxml-->
+<view class="swiper">
+    <view class="title">
+        <view class="ti">轮播图</view>
+        <view class="td" bindtap="addswiper">添加</view>
+    </view>
+    <view class="imageList" wx:for="{{swiperList}}" wx:key="_id">
+        <view class="list">
+            <image class="" src="{{item.url}}" >
+            </image>
+            <view class="details">
+               <view bindtap="getIamge" data-url="{{item.url}}" data-id="{{item._id}}" class="view">更改</view>
+               <view class="view" bindtap="delte" data-url="{{item.url}}" data-id="{{item._id}}">删除</view>
+            </view>
+        </view>
+    </view>
+</view>

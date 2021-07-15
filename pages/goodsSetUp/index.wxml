@@ -1,0 +1,31 @@
+<!--pages/goodsSetUp/index.wxml-->
+<view class="goodsSetUp">
+    <view class="title">
+        <view class="ti">商品</view>
+        <view class="td">
+            <navigator url="/pages/update/index?type=1">添加</navigator>
+        </view>
+    </view>
+    <view class="goodsList">
+        <view class="goodsItem" wx:key="_id" wx:for="{{goodsList}}">
+            <view class="left">
+                <image src="{{item.url}}"/>
+            </view>
+            <view class="center">
+                <view class="name">名称：{{item.name}}</view>
+                <view class="price">价格：{{item.price}}</view>
+                <view class="image">分类：{{item.typeName}}</view>
+            </view>
+            <view class="right">
+                <view class="top">
+                   <navigator url="/pages/update/index?id={{item._id}}&type=2">
+                       编辑
+                   </navigator>
+                </view>
+                <!-- <view class="cen">查看</view> -->
+                <view class="but" data-item="{{item}}" bindtap="deleteItem">删除</view>
+            </view>
+        </view>
+    </view>
+</view>
+

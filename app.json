@@ -1,0 +1,58 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/establish/index",
+    "pages/seach/index",
+    "pages/typeList/index",
+    "pages/details/index",
+    "pages/goodsList/index",
+    "pages/update/index",
+    "pages/briefIntroduction/index",
+    "pages/swiper/index",
+    "pages/goodsSetUp/index",
+    "pages/contact/index",
+    "pages/settingGoodsType/index",
+    "pages/settingGoodsBrand/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "广安鼎能机电设备有限公司",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+       {
+        "pagePath": "pages/establish/index",
+        "text": "设置",
+        "iconPath": "./styles/icon/shezhi.png",
+        "selectedIconPath": "./styles/icon/shezhi1.png"
+      }, 
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./styles/icon/shouye.png",
+      "selectedIconPath": "styles/icon/shouye1.png"
+    },
+     {
+      "pagePath": "pages/goodsList/index",
+      "text": "商品",
+      "iconPath": "./styles/icon/product.png",
+      "selectedIconPath": "./styles/icon/product1.png"
+    }, 
+    {
+      "pagePath": "pages/briefIntroduction/index",
+      "text": "简介",
+      "iconPath": "./styles/icon/jianjie.png",
+      "selectedIconPath": "./styles/icon/jianjie1.png"
+    }, 
+    {
+      "pagePath": "pages/contact/index",
+      "text": "联系我们",
+      "iconPath": "./styles/icon/dianhua.png",
+      "selectedIconPath": "./styles/icon/dianhua1.png"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

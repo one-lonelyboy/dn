@@ -1,0 +1,11 @@
+/* comments/Seach/Seach.wxss */
+.seachinput {
+  height: 90rpx;
+  padding: 10rpx;
+  background-color: var(--themeColor);
+}
+.seachinput navigator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,56 @@
+/* pages/goodsSetUp/index.wxss */
+/* pages/swiper/index.wxss */
+/* pages/establish/index.wxss */
+.goodsSetUp {
+  padding: 24rpx;
+}
+.goodsSetUp .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 48rpx;
+}
+.goodsSetUp .title .td {
+  font-size: 40rpx;
+  color: red;
+}
+.goodsSetUp .goodsList .goodsItem {
+  border: 1px solid #ccc;
+  height: 198rpx;
+  display: flex;
+  padding: 12rpx;
+  margin-bottom: 12rpx;
+}
+.goodsSetUp .goodsList .goodsItem .left {
+  flex: 1;
+  margin-right: 12rpx;
+}
+.goodsSetUp .goodsList .goodsItem .left image {
+  width: 100%;
+  height: 100%;
+}
+.goodsSetUp .goodsList .goodsItem .center {
+  width: 330rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.goodsSetUp .goodsList .goodsItem .center .image,
+.goodsSetUp .goodsList .goodsItem .center .name {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.goodsSetUp .goodsList .goodsItem .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.goodsSetUp .goodsList .goodsItem .right .top {
+  color: red;
+  cursor: pointer;
+}

@@ -1,0 +1,81 @@
+<view class="">
+    <SeachInput></SeachInput>
+    <view class="inputSiper">
+        <swiper autoplay circular indicator-dots>
+            <swiper-item wx:for="{{swiperList1}}" wx:key="_id">
+                <image v-if="item.url" class="" src="{{item.url}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="goodsType">
+        <view class="listType">
+            <navigator
+              class="itemnavigator"
+              url="/pages/typeList/index?name={{item._id}}"
+              wx:for="{{goodsTypeList}}" wx:key="id">
+                <view class="images">
+                    <image src="{{item.url}}"></image>
+                </view>
+                <view class="titleview">{{item.name}}</view>
+            </navigator>
+        </view>
+    </view>
+    <view class="imageList">
+        <image src="../../styles/image/WechatIMG37.jpeg"></image>
+        <image src="../../styles/image/WechatIMG36.jpeg"></image>
+        <image src="../../styles/image/WechatIMG35.jpeg"></image>
+    </view>
+    <view class="goodsList">
+        <view class="title">
+            <view><i style="color: red" class="iconfont icon-huo"></i>最火热销</view>
+            <navigator open-type="switchTab" url="/pages/goodsList/index">
+                更多产品 >>
+            </navigator>
+        </view>
+        <scroll-view enable-flex="true" class="scollview" scroll-x="true">
+            <navigator class="navlist"
+                wx:key="_id"
+                wx:for="{{hotList}}"
+                url="/pages/details/index?id={{item._id}}">
+                <view class="list">
+                    <image src="{{item.url}}" />
+                    <text>{{item.name}}</text>
+                </view>
+            </navigator>
+        </scroll-view>
+        <view class="title">
+            <view><i style="color: red" class="iconfont icon-xin"></i>最新上架</view>
+            <navigator open-type="switchTab" url="/pages/goodsList/index">
+                更多产品 >>
+            </navigator>
+        </view>
+        <scroll-view class="scollview" scroll-x="true" enable-flex="true">
+            <navigator class="navlist"
+                wx:key="_id"
+                wx:for="{{newList}}"
+                url="/pages/details/index?id={{item._id}}">
+                <view class="list">
+                    <image src="{{item.url}}" />
+                    <text>{{item.name}}</text>
+                </view>
+            </navigator>
+        </scroll-view>
+         <view class="title">
+            <view><i style="color: red" class="iconfont icon-xin"></i>综合产品</view>
+            <navigator open-type="switchTab" url="/pages/goodsList/index">
+                更多产品 >>
+            </navigator>
+        </view>
+        <scroll-view enable-flex="true" class="scollview" scroll-x="true">
+            <navigator class="navlist"
+                wx:key="_id"
+                wx:for="{{browseList}}"
+                url="/pages/details/index">
+                <view class="list">
+                    <image src="{{item.url}}" />
+                    <text>{{item.name}}</text>
+                </view>
+            </navigator>
+        </scroll-view>
+    </view>
+</view>

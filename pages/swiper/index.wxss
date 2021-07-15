@@ -1,0 +1,39 @@
+/* pages/swiper/index.wxss */
+/* pages/establish/index.wxss */
+.swiper {
+  padding: 24rpx;
+}
+.swiper .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 48rpx;
+}
+.swiper .title .td {
+  font-size: 40rpx;
+  color: red;
+}
+.swiper .imageList .list {
+  width: 100%;
+  margin-bottom: 16rpx;
+  border: 1px solid #ccc;
+}
+.swiper .imageList .list image {
+  width: 100%;
+}
+.swiper .imageList .list .details {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 12rpx;
+}
+.swiper .imageList .list .details .view {
+  width: 180rpx;
+  height: 60rpx;
+  border: 1px solid #ccc;
+  padding: 6rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18rpx;
+}

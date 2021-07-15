@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Information": "../../comments/Information/Information"
+  },
+  "navigationBarTitleText": "产品详情"
+}

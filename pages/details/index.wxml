@@ -1,0 +1,33 @@
+<view class="goodDetails">
+    <view class="swiperview">
+       <swiper circular indicator-dots>
+            <swiper-item wx:for="{{goodsList.swiperList}}" wx:key="_id">
+                    <image wx:if="{{item.type =='1'}}" class="imageSwiper" src="{{item.url}}"></image>
+                    <video controls="{{false}}" wx:if="{{item.type =='2'}}" class="sweiperImg" src="{{item.url}}"></video>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="titleview">
+        <view class="name">{{goodsList.name}}</view>
+        <view class="price">¥{{goodsList.price}}</view>
+    </view>
+    <view class="explain" hidden="goodsList.introduces">
+        <view class="title">产品说明</view>
+        <view class="bady" wx:for="{{goodsList.introduces}}" wx:key="index">
+           {{index}}. {{item}}
+        </view>
+    </view>
+    <view class="characteristic" hidden="goodsList.characteristics">
+        <view class="title">产品特点</view>
+        <view class="bady" wx:for="{{goodsList.characteristics}}" wx:key="index">
+           {{index}}. {{item}}
+        </view>
+    </view>
+    <view class="iamgesList">
+        <view class="images" wx:key="index" wx:for="{{goodsList.detailsList}}">
+            <image wx:if="{{item.type =='1'}}" class="sweiperImg" src="{{item.url}}"></image>
+            <video controls="{{false}}" wx:if="{{item.type =='2'}}" class="sweiperImg" src="{{item.url}}"></video>
+        </view>
+    </view>
+</view>
+  

@@ -1,0 +1,65 @@
+/* pages/update/index.wxss */
+.updateData {
+    padding: 24rpx;
+    .titletop {
+      display: flex;
+      justify-content: center;
+      font-size: 48rpx;
+    }
+    .title {
+      margin-top: 36rpx;
+      font-size: 30rpx;
+      .getiamge {
+        display: inline-block;
+        margin-right: 12rpx;
+        padding: 0rpx 10rpx;
+        background-color: #ccc;
+        border-radius: 8rpx;
+      }
+    }
+    .inputview {
+        border: 1px solid #eee;
+        height: 70rpx;
+        border-radius: 8rpx;
+    }
+    .textView {
+      border: 1px solid #eee;
+      min-height: 170rpx;
+      width: 100%;
+      border-radius: 8rpx;
+    }
+    .images {
+      margin-bottom: 24rpx;
+      text {
+        display: inline-block;
+        width: 100%;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+      }
+    }
+    input {
+      padding-left: 18rpx;
+    }
+    .modalimage {
+      width: 100%;
+    }
+    .swiperImage {
+      margin-top: 24rpx;
+      display: flex;
+      flex-wrap: wrap;
+      .swiperitem {
+        width: 32%;
+        height: 180rpx;
+        margin-right: 2%;
+        border: 1px solid #eee;
+        .sweiperImg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      :nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+}

@@ -1,0 +1,63 @@
+<!--pages/update/index.wxml-->
+
+<view class="updateData">
+  <view class="titletop">产品{{title}} </view>
+  <view class="title">产品名称：</view>
+  <input class="inputview" type="text" value="{{goodsData.name}}" bindinput="inputName"/>
+  <view class="title">产品价格：</view>
+  <input class="inputview" value="{{goodsData.price}}" type="digit" bindinput="inputPrice"/>
+  <view class="title">产品种类：</view>
+  <view class="container" bindtap="close">
+    <view class="select-wrap">
+      <Select id="select" defaultOption="{{defaultOption}}" options="{{options}}" key="_id" text="name" bind:change="change"></Select>
+    </view>
+  </view>
+  <view class="title">产品品牌：</view>
+  <view class="container" bindtap="close">
+    <view class="select-wrap">
+      <Select id="select" defaultOption="{{defaultOption1}}" options="{{optionsbrand}}" key="_id" text="name" bind:change="change1"></Select>
+    </view>
+  </view>
+  <view class="title">是否最新产品：<switch checked="{{goodsData.newswitch}}" bindchange="switch1Change"/></view>
+  <view class="title">是否最火产品：<switch checked="{{goodsData.hotswitch}}" bindchange="switch2Change"/></view>
+  <view class="title">产品介绍：</view>
+  <textarea class="textView" bindblur="bindTextAreaBlur" value="{{goodsData.introduce}}" :maxlength="500" placeholder="输入" />
+  <view class="title">产品特点：</view>
+  <textarea class="textView" bindblur="bindTextAreaBlur2" value="{{goodsData.characteristic}}" :maxlength="500"  placeholder="输入" />
+  <view class="title">
+    产品封面图片：
+    <text class="getiamge" data-type="1" bindtap="getIamge">上传图片</text>
+  </view>
+  <view class="images">
+    <text bindtap="imgDilog" data-url="{{goodsData.url}}">{{goodsData.url}}</text>
+  </view>
+  <view class="title">
+    产品轮播图片或视频：
+    <text class="getiamge" wx:if="{{goodsData.swiperList.lenght !==6}}" data-type="1" bindtap="getDetailsIamge">上传图片</text>
+    <text class="getiamge" wx:if="{{goodsData.swiperList.lenght !==6}}" data-type="2" bindtap="getDetailsIamge">上传视频</text>
+  </view>
+  <view class="swiperImage">
+    <view class="swiperitem" bindtap="imgDilog" wx:for="{{goodsData.swiperList}}" wx:key="id" data-url="{{item.url}}" data-type="{{item.type}}" data-id="{{item.id}}" bindlongpress="deleteImage">
+      <image wx:if="{{item.type =='1'}}" class="sweiperImg" src="{{item.url}}"></image>
+      <video controls="{{false}}" wx:if="{{item.type =='2'}}" class="sweiperImg" src="{{item.url}}"></video>
+    </view>
+  </view>
+  <view class="title">
+    产品详情图片或视频：
+    <text class="getiamge" data-deType="1" wx:if="{{goodsData.detailsList.lenght !==6}}" data-type="1" bindtap="getDetailsIamge">上传图片</text>
+    <text class="getiamge" data-deType="1" wx:if="{{goodsData.detailsList.lenght !==6}}" data-type="2" bindtap="getDetailsIamge">上传视频</text>
+  </view>
+  <view class="swiperImage">
+    <view class="swiperitem" bindtap="imgDilog" wx:for="{{goodsData.detailsList}}" wx:key="id" data-url="{{item.url}}" data-type="{{item.type}}" data-id="{{item.id}}" bindlongpress="deleteImage">
+      <image wx:if="{{item.type =='1'}}" class="sweiperImg" src="{{item.url}}"></image>
+      <video controls="{{false}}" wx:if="{{item.type =='2'}}" class="sweiperImg" src="{{item.url}}"></video>
+    </view>
+  </view>
+  <button bindtap="uploudData">{{title}}</button>
+  <modal title="查看" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalConfirm">
+    <view>
+      <image class="modalimage" wx:if="{{type =='1'}}" src="{{urlD}}" mode='aspectFill'></image>
+      <video class="modalimage" wx:if="{{type =='2'}}" src="{{urlD}}" mode='aspectFill'></video>
+    </view>
+  </modal>
+</view>

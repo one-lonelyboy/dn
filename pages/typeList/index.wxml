@@ -1,0 +1,12 @@
+<view class="list">
+    <view class="listtype" wx:if="{{typeList.lenght !== 0}}">
+        <GoodsList goodsList="{{typeList}}"></GoodsList>
+        <view class="isok" wx:if="{{isOk}}">
+            --------已经没有咯---------
+        </view>
+    </view>
+    <view class="listNo" wx:else>
+        暂无商品
+    </view>
+</view>
+

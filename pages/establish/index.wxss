@@ -1,0 +1,23 @@
+/* pages/establish/index.wxss */
+.swiper {
+  padding: 24rpx;
+}
+.swiper .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper .imageList {
+  padding: 24rpx;
+}
+.swiper .imageList .list {
+  width: 100%;
+}
+.swiper .imageList .list image {
+  width: 100%;
+}
+.swiper .imageList .list .details {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}

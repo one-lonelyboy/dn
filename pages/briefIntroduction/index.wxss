@@ -1,0 +1,23 @@
+/* pages/briefIntroduction/index.wxss */
+.briefIntroduction .profileCompany {
+  margin-top: 50rpx;
+}
+.briefIntroduction .profileCompany .detailsprofile {
+  padding: 30rpx;
+}
+.briefIntroduction .businessMain .businessMainbody {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24rpx;
+}
+.briefIntroduction .businessMain .businessMainbody .bodylist {
+  height: 40rpx;
+  background-color: #ccc;
+  display: inline-block;
+  margin: 5px 5rpx;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-radius: 15rpx;
+}

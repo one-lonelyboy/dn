@@ -1,0 +1,41 @@
+<!--pages/contact/index.wxml-->
+<view class="contact">
+    <view class="img">
+        <image src="../../styles/image/tell.jpeg"></image>
+    </view>
+    <view class="title">
+        <view class="titlecenter">广安鼎能机电设备有限公司</view>
+    </view>
+    <view class="list">
+        <view class="itemlist">
+            <image src="../../styles/icon/dianhua1.png"/>
+            <text class="tell">15202386883(胡女士)</text>
+            <text class="tell1" bindtap="callphone">点击拨打</text>
+        </view>
+        <view class="itemlist">
+            <image src="../../styles/icon/dianhua1.png"/>
+            <text class="tell">15025538818(胡先生)</text>
+            <text class="tell1" bindtap="callphone">点击拨打</text>
+        </view>
+        <view class="itemlist">
+            <image src="../../styles/image/dingwei1.png"/>
+            <text class="tell">四川省广安市广安区建安南路375号</text>
+        </view>
+        <view class="itemlist">
+            <image src="../../styles/image/weixin.png"/>
+            <text data-text="H639249239" bindtap="copy" class="tell">H639249239</text>
+            <text data-text="15025538818" bindtap="copy" class="tell">15025538818</text>
+            <text style="margin-left: 20rpx">(胡先生)</text>
+        </view>
+        <view class="itemlist">
+            <image src="../../styles/image/weixin.png"/>
+            <text data-text="Zmhumeixiang" bindtap="copy" class="tell">Zmhumeixiang</text>
+            <text data-text="15202386883" bindtap="copy" class="tell">15202386883</text>
+            <text style="margin-left: 20rpx">(胡女士)</text>
+        </view>
+        <view class="erweima">
+
+        </view>
+    </view>
+</view>
+

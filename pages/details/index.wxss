@@ -1,0 +1,46 @@
+/* pages/details/index.wxss */
+.goodDetails {
+  padding: 24rpx;
+}
+.goodDetails .swiperview {
+  width: 100%;
+  height: 380rpx;
+}
+.goodDetails .swiperview swiper {
+  height: 100%;
+  width: 100%;
+}
+.goodDetails .swiperview swiper .imageSwiper {
+  width: 100%;
+  height: 380rpx;
+}
+.goodDetails .titleview {
+  margin-top: 16rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16rpx;
+}
+.goodDetails .titleview .name {
+  width: 100%;
+}
+.goodDetails .titleview .price {
+  color: red;
+}
+.goodDetails .explain .title,
+.goodDetails .characteristic .title {
+  font-weight: 900;
+  padding: 16rpx;
+  border-bottom: 1px solid #ccc;
+}
+.goodDetails .explain .bady,
+.goodDetails .characteristic .bady {
+  padding: 24rpx;
+}
+.goodDetails .iamgesList .images {
+  width: 100%;
+  height: 380rpx;
+}
+.goodDetails .iamgesList .images image {
+  height: 100%;
+  width: 100%;
+}

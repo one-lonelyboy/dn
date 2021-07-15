@@ -1,0 +1,10 @@
+ <view class="information">
+       <view class="title">联系方式</view>
+       <view class="informationlist">
+           <view>公司地址：四川省广安市广安区建安南路375号 </view>
+           <view>联 系 人： 胡梅香女士</view>
+           <view bindtap="callphone">联系电话：
+               15202386883
+           </view>
+       </view>
+    </view>

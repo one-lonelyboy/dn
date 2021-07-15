@@ -1,0 +1,33 @@
+<!--pages/settingGoodsType/index.wxml-->
+<view class="stDoodsType">
+   <view class="title">
+        <view class="ti">商品种类设置</view>
+        <view class="td" bindtap="addDliog">添加</view>
+    </view>
+    <view class="goodsList">
+        <view class="goodsItem" wx:key="_id" wx:for="{{goodsTypeList}}">
+            <view class="left">
+                <image src="{{item.url}}"/>
+            </view>
+            <view class="center">
+                <view class="name">名称：{{item.name}}</view>
+                <view class="price">数量：{{item.number}}</view>
+            </view>
+            <view class="right">
+                <view class="details" data-url="{{item.url}}" data-name="{{item.name}}" data-id="{{item._id}}" bindtap="detailsType">编辑</view>
+                <view wx:if="{{item.number === 0}}" data-url="{{item.url}}" class="delete" data-id="{{item._id}}" bindtap="deleteType">删除</view>
+            </view>
+        </view>
+    </view>
+  <modal class="modalview" title="查看" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="opens">
+      <view class="titleview">种类名称：</view>
+      <input type="text" bindinput="inputName" value="{{name}}"/>
+      <view class="titleview">封面图片</view>
+      <view class="imageview">
+          <view class="centen" bindtap="addImage">
+              <view wx:if="{{!url}}" class="iocn">+</view>
+              <image wx:else src="{{url}}" />
+          </view>
+      </view>
+  </modal>
+</view>
