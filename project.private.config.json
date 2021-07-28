@@ -66,6 +66,18 @@
           "pathName": "pages/settingGoodsBrand/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/goodsSetUp/index",
+          "pathName": "pages/goodsSetUp/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/details/index",
+          "pathName": "pages/details/index",
+          "query": "id=14139e1260ffb0360030651807830f74",
+          "scene": null
         }
       ]
     }

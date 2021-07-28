@@ -8,7 +8,7 @@ Page({
   data: {
     typeList: [],
     pageNumber: -1,
-    typeName: undefined,
+    type: undefined,
     isOk: false
   },
   //点击搜索
@@ -19,10 +19,11 @@ Page({
     })
     that.data.pageNumber += 1
     DB.where({
-      typeName: that.data.typeName
+      type: that.data.type
     }).skip(20 * that.data.pageNumber)
     .get()
     .then(res=>{
+      console.log(res, 'sss')
       wx.hideLoading()
       let ok = res.data.length < 20
       that.setData({

@@ -11,12 +11,47 @@
   margin-top: 36rpx;
   font-size: 30rpx;
 }
-.updateData .title .getiamge {
+.updateData .title .getiamge,
+.updateData .title .addtext {
   display: inline-block;
   margin-right: 12rpx;
   padding: 0rpx 10rpx;
   background-color: #ccc;
   border-radius: 8rpx;
+}
+.updateData .specificationList .listsp1,
+.updateData .specificationList .listsp {
+  display: flex;
+  border: 1px solid #ccc;
+}
+.updateData .specificationList .listsp1 .name,
+.updateData .specificationList .listsp .name,
+.updateData .specificationList .listsp1 .price,
+.updateData .specificationList .listsp .price,
+.updateData .specificationList .listsp1 .delete,
+.updateData .specificationList .listsp .delete {
+  display: flex;
+  align-items: center;
+}
+.updateData .specificationList .listsp1 .name,
+.updateData .specificationList .listsp .name {
+  flex: 6;
+  border-right: 1px solid #ccc;
+  padding-left: 10rpx;
+}
+.updateData .specificationList .listsp1 .price,
+.updateData .specificationList .listsp .price {
+  flex: 2;
+  border-right: 1px solid #ccc;
+  justify-content: center;
+}
+.updateData .specificationList .listsp1 .delete,
+.updateData .specificationList .listsp .delete {
+  width: 80rpx;
+  justify-content: center;
+}
+.updateData .specificationList .listsp1 {
+  border-bottom: none;
 }
 .updateData .inputview {
   border: 1px solid #eee;

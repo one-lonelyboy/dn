@@ -20,7 +20,8 @@ Page({
        hotswitch: false,
        browse: 0,
        brand: '',
-       brandname: ''
+       brandname: '',
+       specificationList: []
      },
      title: '',
      goodsId: undefined,
@@ -30,9 +31,46 @@ Page({
      urlD: '',
      type: undefined,
      modalHidden: true,
+     modalHiddenSp: true,
+     titlesp: '规格新增',
      defaultOption:{},
      defaultOption1:{},
-     typeId: undefined
+     typeId: undefined,
+     spdata: {
+       name:'',
+       price: undefined
+     }
+  },
+  //编辑产品规格
+  updatesp(e){
+    console.log(e.currentTarget.dataset)
+    let data = e.currentTarget.dataset.item
+    this.setData({
+      'spdata': data,
+      'modalHiddenSp': false,
+      'titlesp': '规格编辑'
+    })
+  },
+  deletes(e){
+    let that = this
+    let id = e.currentTarget.dataset.id
+    let data = that.data.goodsData.specificationList.filter(item=>{
+      return item.id !==id
+    })
+    that.setData({
+      "goodsData.specificationList": data
+    })
+  },
+  addspecification(){
+    this.setData({
+      'modalHiddenSp': false,
+      titlesp: '规格新增'
+    })
+  },
+  modalConfirmsp(){
+    this.setData({
+      'modalHiddenSp': true
+    })
   },
   //删除轮播图图片
   deleteImage: function (e) {
@@ -143,8 +181,34 @@ Page({
   },
   modalConfirm(){
     this.setData({
-      modalHidden: true
+      modalHidden: true,
+      spdata: {}
     })
+  },
+  modalConfirmOk(){
+    let that = this
+    let data = JSON.parse(JSON.stringify(that.data.goodsData.specificationList))
+    if(that.data.spdata.name && that.data.spdata.price) {
+      if(that.data.titlesp === '规格新增'){
+        data.push({
+          name: that.data.spdata.name,
+          price: that.data.spdata.price,
+          id: new Date().getTime()
+        })
+      } else {
+        that.data.goodsData.specificationList.forEach((item,index)=>{
+          if(item.id === that.data.spdata.id) {
+            data[index] = that.data.spdata
+          }
+        })
+      }
+      that.setData({
+        'goodsData.specificationList': data,
+        'modalHiddenSp': true,
+        'spdata': {}
+      })
+
+    }
   },
   //拿到商品种类
   change(event){
@@ -236,9 +300,19 @@ Page({
       "goodsData.name": e.detail.value
     })
   },
+  inputspName(e){
+    this.setData({
+      "spdata.name": e.detail.value
+    })
+  },
   inputPrice(e){
     this.setData({
       "goodsData.price": e.detail.value
+    })
+  },
+  inputspPrice(e){
+    this.setData({
+      "spdata.price": e.detail.value
     })
   },
   switch1Change(e) {

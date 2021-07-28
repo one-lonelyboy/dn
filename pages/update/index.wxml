@@ -6,6 +6,26 @@
   <input class="inputview" type="text" value="{{goodsData.name}}" bindinput="inputName"/>
   <view class="title">产品价格：</view>
   <input class="inputview" value="{{goodsData.price}}" type="digit" bindinput="inputPrice"/>
+  <view class="title">产品规格： <text class="addtext" bindtap="addspecification">添加</text></view>
+  <view class="specificationList" wx:if="{{goodsData.specificationList.length > 0}}">
+    <view class="listsp1">
+        <view class="name">规格详情</view>
+        <view class="price">价格</view>
+        <view class="delete">
+          操作
+        </view>
+     </view>
+     <view wx:for="{{goodsData.specificationList}}" wx:key="id" class="listsp">
+        <view class="name">{{item.name}}</view>
+        <view class="price">{{item.price}}</view>
+        <view class="delete">
+          <view>
+            <view data-item="{{item}}" bindtap="updatesp">编辑</view>
+            <view data-id="{{item.id}}" bindtap="deletes">删除</view>
+          </view>
+        </view>
+     </view>
+  </view>
   <view class="title">产品种类：</view>
   <view class="container" bindtap="close">
     <view class="select-wrap">
@@ -58,6 +78,12 @@
     <view>
       <image class="modalimage" wx:if="{{type =='1'}}" src="{{urlD}}" mode='aspectFill'></image>
       <video class="modalimage" wx:if="{{type =='2'}}" src="{{urlD}}" mode='aspectFill'></video>
+    </view>
+  </modal>
+  <modal title="{{titlesp}}" hidden="{{modalHiddenSp}}" bindconfirm="modalConfirmOk" bindcancel="modalConfirmsp">
+    <view>
+      规格详细：<input class="inputview" type="text" value="{{spdata.name}}" bindinput="inputspName"/>
+      价格：<input class="inputview" type="digit" value="{{spdata.price}}" bindinput="inputspPrice"/>
     </view>
   </modal>
 </view>

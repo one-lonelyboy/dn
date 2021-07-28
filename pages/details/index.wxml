@@ -11,16 +11,23 @@
         <view class="name">{{goodsList.name}}</view>
         <view class="price">¥{{goodsList.price}}</view>
     </view>
-    <view class="explain" hidden="goodsList.introduces">
+    <view class="specificationList">
+        <view class="list" wx:for="{{goodsList.specificationList}}" wx:key="id">
+            <view class="name">{{item.name}}</view>
+            <view class="price">¥{{item.price}}</view>
+        </view>
+       
+    </view>
+    <view class="explain" >
         <view class="title">产品说明</view>
         <view class="bady" wx:for="{{goodsList.introduces}}" wx:key="index">
-           {{index}}. {{item}}
+           {{index + 1}}. {{item}}
         </view>
     </view>
-    <view class="characteristic" hidden="goodsList.characteristics">
+    <view class="characteristic" >
         <view class="title">产品特点</view>
         <view class="bady" wx:for="{{goodsList.characteristics}}" wx:key="index">
-           {{index}}. {{item}}
+           {{index + 1}}. {{item}}
         </view>
     </view>
     <view class="iamgesList">

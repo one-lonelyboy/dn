@@ -13,6 +13,7 @@ Page({
      })
      .get({
        success(res) {
+         console.log(res)
          const data = res.data[0]
          if(data.introduce) {
            data.introduces = data.introduce.split('/')
@@ -21,7 +22,7 @@ Page({
           data.characteristics = data.characteristic.split('/')
         }
          that.setData({
-          goodsList:res.data[0]
+          goodsList:data
          })
        }
      })
